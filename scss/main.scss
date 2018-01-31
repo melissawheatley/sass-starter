@@ -1,3 +1,5 @@
+@import 'reset'; //no need to include the extension
+
 $font-stack: Helvetica, sans-serif; 
 $primary-color: #420039;
 $link-color: #004e64;
@@ -28,4 +30,39 @@ nav {
       padding: 6px 12px;
       text-decoration: none;
     }
+  }
+
+  @mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+       -moz-border-radius: $radius;
+        -ms-border-radius: $radius;
+            border-radius: $radius;
+  }
+  
+  .box { @include border-radius(10px); }
+  .bag { @include border-radius(30px); }
+
+  %message-shared {
+    border: 1px solid #ccc;
+    padding: 10px;
+    color: #333;
+  }
+  
+  .message {
+    @extend %message-shared;
+  }
+  
+  .success {
+    @extend %message-shared;
+    border-color: $brand-lightPurple;
+  }
+  
+  .error {
+    @extend %message-shared;
+    border-color: $brand-lightGrey;
+  }
+  
+  .warning {
+    @extend %message-shared;
+    border-color: red;
   }
