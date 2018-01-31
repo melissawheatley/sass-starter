@@ -1,7 +1,31 @@
 $font-stack: Helvetica, sans-serif; 
-$primary-color: #004e64;
+$primary-color: #420039;
+$link-color: #004e64;
+$secondary-color: #6b717e;
+$brand-lightGrey: #cecfc7;
+$brand-lightPurple: #ada8b6; 
 
 body {
     font: 100% $font-stack;
     color: $primary-color;
 }
+
+h1 {
+    color: $secondary-color;
+}
+
+nav {
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+  
+    li { display: inline-block; }
+  
+    a {
+      display: block;
+      padding: 6px 12px;
+      text-decoration: none;
+    }
+  }
